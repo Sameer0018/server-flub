@@ -13,7 +13,10 @@ require('./db/conn');
 
 app.use(cookieParser())
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+    origin : 'https://flubbanks.herokuapp.com/',
+    credentials  : true
+}));
 
 
 //we link the router file to make our route easy
